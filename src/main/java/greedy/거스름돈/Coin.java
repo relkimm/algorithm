@@ -10,17 +10,6 @@ public enum Coin {
 
     Coin(int value) { this.value = value; }
 
-    public boolean canChange(int money) {
-        return money >= this.value;
-    }
-
-    public int giveChange(int money) {
-        if(this.canChange(money) == false) {
-            throw new IllegalArgumentException("Cannot change money with Coin " + this.value);
-        }
-        return money - this.value;
-    }
-
     public static Coin getChangeable(int money) {
         if(Coin.KR_500.canChange(money)) {
             return Coin.KR_500;
@@ -33,4 +22,19 @@ public enum Coin {
         }
         return Coin.KR_10;
     }
+
+    public Change giveChange(int money) {
+        if(this.canChange(money) == false) {
+            throw new IllegalArgumentException("Cannot change money with Coin " + this.value);
+        }
+
+        int changeMoney = money % this.value;
+        int coinCount = money / this.value;
+        return new Change(changeMoney, coinCount);
+    }
+
+    private boolean canChange(int money) {
+        return money >= this.value;
+    }
+
 }

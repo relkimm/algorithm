@@ -8,15 +8,17 @@ public class Solution {
     }
 
     public int minCoinCount(int money) {
-        int coinCount = 0;
+        int result = 0;
         while(true) {
             if(money <= 0) {
                 break;
             }
             final Coin coin = Coin.getChangeable(money);
-            money = coin.giveChange(money);
-            coinCount++;
+            final Change change = coin.giveChange(money);
+
+            money = change.getMoney();
+            result += change.getCoinCount();
         }
-        return coinCount;
+        return result;
     }
 }
