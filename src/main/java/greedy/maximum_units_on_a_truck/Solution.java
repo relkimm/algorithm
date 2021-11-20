@@ -1,4 +1,4 @@
-package maximum_units_on_a_truck;
+package greedy.maximum_units_on_a_truck;
 
 import java.util.ArrayList;
 import java.util.Arrays;

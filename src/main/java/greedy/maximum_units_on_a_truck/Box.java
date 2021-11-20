@@ -1,4 +1,4 @@
-package maximum_units_on_a_truck;
+package greedy.maximum_units_on_a_truck;
 
 public class Box {
     private int toyCount;

@@ -1,4 +1,4 @@
-package 체육복;
+package greedy.체육복;
 
 import java.util.HashMap;
 import java.util.Map;
