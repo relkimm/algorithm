@@ -1,4 +1,4 @@
-package greedy.거스름돈;
+package greedy.change;
 
 public class Solution {
     public static void main(String[] args) {

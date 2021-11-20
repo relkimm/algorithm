@@ -1,4 +1,4 @@
-package greedy.보석가게;
+package greedy.jewelry_shop;
 
 public class Solution {
     public static void main(String[] args) {

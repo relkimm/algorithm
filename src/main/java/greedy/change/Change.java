@@ -1,4 +1,4 @@
-package greedy.거스름돈;
+package greedy.change;
 
 public class Change {
     private int money;
